@@ -1,12 +1,7 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
 
 const requestSchema = new Schema({
-  owner:{
-    type: String,
-    required: true
-  },
   fromLanguage:{
     type: String,
     required: true
@@ -15,17 +10,21 @@ const requestSchema = new Schema({
     type: String,
     required: true
   },
+  startDate:{
+    type: Date,
+    required: true
+  },
+  finishDate:{
+    type: Date,
+    required: true
+  },
   assignedTo:{
     type: String,
-    default: null
+    default: "Not Assigned"
   },
-  assignedDate:{
-    type: Date,
-    default: null
-  },
-  status:{
-    type:Boolean,
-    default: false
+  madeBy:{
+    type: String,
+    required: true
   }
 });
 const Request = mongoose.model('Request', requestSchema);

@@ -1,0 +1,90 @@
+.rpMain{
+    background-image: url("../../images/background.jpg");
+    min-height: 100vh;
+    background-Size:cover;
+}
+
+.rpContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    padding-top: 15%;
+    height: fit-content;
+}
+.rpContainer ::placeholder{
+    color: rgb(182, 182, 182);
+}
+.rpText{
+margin-left: auto;
+margin-right: auto;
+margin-top: 10%;
+font-weight: 700;
+}
+.rpText h1{
+/* font-size: 70px; */
+color: #ededee;
+font-weight: 700;
+}
+.rpText p{
+font-size: 20px;
+color: #cccccc;
+font-weight: 300;
+}
+.rpText p a{
+color: #ededee;
+font-weight: 700;
+}
+.rpForm{
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.rpnameContainer{
+    display: flex;
+}
+.rpusername, .rppassword, .rpname{
+border: none;
+border-bottom: 1px solid #fff;
+background: transparent;
+padding: 10px;
+margin: 15px 0;
+color: #fff;
+outline: none;
+font-family: sans-serif, 'Raleway';
+}
+.rppassword{
+margin-bottom: 30px;
+}
+.rpname{
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+}
+.rpFooter{
+    bottom:0;
+    right:0;
+    position:absolute;
+}
+
+@media (max-width:900px){
+    .rpname{
+        width: 100%;   
+    }
+    .rpnameContainer{
+        flex-direction: column;
+    }
+}
+@media (max-width:270px){
+    .rpMain{
+        background-image: none;
+        background-color: gray;
+    }
+    .rpContainer{
+        padding-top: 75%;
+    }
+    .rpFooter{
+        display: none;
+    }
+}
