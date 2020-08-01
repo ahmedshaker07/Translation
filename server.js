@@ -13,7 +13,7 @@ mongoose.connect(uri,{useUnifiedTopology: true,useNewUrlParser: true,useFindAndM
 const connection = mongoose.connection;
 connection.once('open', () => {console.log("MongoDB database connection established successfully");})
 
-// Express body parsers
+// Express body parser
 app.use(express.json());
 app.use(
   express.urlencoded({
